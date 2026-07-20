@@ -1,100 +1,367 @@
-# RADIX Talent Match
+# 🚀 RADIX Talent Match
 
-A Streamlit-powered AI recruitment intelligence platform for analyzing job descriptions, parsing resumes, building candidate profiles, checking talent readiness, and matching resumes to jobs.
+> **AI-Powered Recruitment & Candidate Evaluation Platform**
 
-## Features
+RADIX Talent Match is an intelligent recruitment platform that automates resume analysis, job description understanding, candidate evaluation, and skill matching using Large Language Models (LLMs). The platform helps recruiters make faster, more informed hiring decisions while giving candidates personalized insights into their strengths and areas for improvement.
 
-- **Job Description Analytics**: extract skills, responsibilities, education, certifications, ATS score, and more from uploaded JD files.
-- **Resume Parser**: parse PDF/DOCX resumes and extract projects, experience, education, certifications, skills, and achievements.
-- **AI Profile Builder**: generate candidate profiles from resumes for quick review and editing.
-- **Talent Check**: compare candidate readiness against company-specific requirements and get a match score, missing skills, and a learning roadmap.
-- **Skill Matching**: compare uploaded resumes with job descriptions, identify matched/missing/extra skills, and calculate a match score.
+---
 
-## Requirements
+# 📌 Problem Statement
 
-- Python 3.10+ recommended
+Recruiters spend significant time manually reviewing resumes, comparing candidates with job descriptions, and identifying suitable talent. Traditional Applicant Tracking Systems (ATS) often rely on keyword matching, which can overlook qualified candidates.
+
+RADIX Talent Match solves this problem using AI-powered semantic analysis, enabling intelligent candidate evaluation beyond simple keyword searches.
+
+---
+
+# 🎯 Objectives
+
+- Automate resume parsing
+- Analyze job descriptions using AI
+- Build structured candidate profiles
+- Evaluate candidate strengths and weaknesses
+- Calculate job matching scores
+- Identify missing skills
+- Provide AI-generated recommendations
+- Reduce recruitment time and improve hiring accuracy
+
+---
+
+# ✨ Features
+
+## 📄 Resume Parsing
+- Upload Resume (PDF)
+- AI-based information extraction
+- Structured candidate profile generation
+
+Extracts:
+- Name
+- Contact Details
+- Education
+- Experience
+- Projects
+- Technical Skills
+- Certifications
+- Internships
+- Hackathons
+- Achievements
+- LinkedIn
+- GitHub
+
+---
+
+## 📊 Job Description Analytics
+
+Analyze job descriptions to extract:
+
+- Required Skills
+- Preferred Skills
+- Experience Requirements
+- Education Requirements
+- Responsibilities
+- Technical Stack
+- Soft Skills
+- Domain
+- Keywords
+
+---
+
+## 👤 AI Profile Builder
+
+Edit and manage candidate profiles.
+
+Supports:
+
+- Personal Information
+- Education
+- Experience
+- Projects
+- Programming Languages
+- Frameworks
+- Databases
+- Cloud Platforms
+- AI Tools
+- Soft Skills
+- Certifications
+- Internships
+- Hackathons
+- Achievements
+- Preferred Roles
+- Work Mode
+- Expected Salary
+
+---
+
+## 🧠 Talent Check
+
+Evaluate candidates across multiple competency areas:
+
+- Programming
+- Technical Skills
+- Projects
+- Experience
+- Education
+- AI/ML Knowledge
+- Cloud Skills
+- Database Skills
+- Communication
+- Problem Solving
+- Certifications
+- Career Readiness
+
+Outputs:
+
+- Strengths
+- Weaknesses
+- AI Recommendations
+- Readiness Score
+
+---
+
+## 🎯 Skill Matching
+
+Compare candidate profiles with job descriptions.
+
+Provides:
+
+- Overall Match Percentage
+- Matching Skills
+- Missing Skills
+- ATS Compatibility
+- Hiring Recommendation
+- Skill Gap Analysis
+
+---
+
+# 🏗 System Architecture
+
+```
+                  Resume PDF
+                      │
+                      ▼
+             Resume Upload Module
+                      │
+                      ▼
+             AI Resume Parser
+                      │
+                      ▼
+          Structured Candidate Profile
+                      │
+                      ▼
+             AI Profile Builder
+                      │
+                      ▼
+              Saved Candidate Profile
+                      │
+          ┌───────────┴────────────┐
+          ▼                        ▼
+    Talent Check             Skill Matching
+          │                        │
+          ▼                        ▼
+ AI Candidate Evaluation     JD Analytics
+          │                        │
+          └───────────┬────────────┘
+                      ▼
+             Final Hiring Report
+```
+
+---
+
+# 🛠 Technology Stack
+
+## Frontend
 - Streamlit
-- Google Gemini / Groq OpenAI-compatible API access
-- `requirements.txt` dependencies:
-  - streamlit
-  - google-generativeai
-  - pdfplumber
-  - python-docx
-  - python-dotenv
-  - pandas
-  - numpy
-  - plotly
-  - pydantic
-  - reportlab
-  - Pillow
-  - streamlit-extras
 
-## Installation
+## Backend
+- Python
 
-1. Clone the repository:
+## AI
+- Groq API
+- Llama 3.3 70B Versatile
+- Prompt Engineering
+- NLP
 
-```bash
-git clone https://github.com/your-org/jd_analytics.git
-cd jd_analytics
+## Data Processing
+- JSON
+- Regex
+- Text Processing
+
+## File Handling
+- PDF Resume Parsing
+
+## Storage
+- JSON
+- Streamlit Session State
+
+---
+
+# 📚 Python Libraries
+
+- streamlit
+- groq
+- openai (Groq-compatible)
+- python-dotenv
+- json
+- os
+- re
+- pathlib
+- datetime
+- typing
+- PyPDF2 / pdfplumber
+
+---
+
+# 📂 Project Structure
+
+```
+RADIX-Talent-Match/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── services/
+│   ├── resume_service.py
+│   ├── jd_service.py
+│   ├── profile_service.py
+│   ├── talent_service.py
+│   └── matching_service.py
+│
+├── ui/
+│   ├── upload_resume.py
+│   ├── jd_analytics.py
+│   ├── profile_dashboard.py
+│   ├── talent_check.py
+│   └── skill_matching.py
+│
+├── data/
+│
+├── assets/
+│
+└── utils/
 ```
 
-2. Create and activate a Python virtual environment:
+---
+
+# 🚀 Installation
+
+Clone the repository
 
 ```bash
-python -m venv .venv
-.venv\Scripts\activate
+git clone https://github.com/yourusername/RADIX-Talent-Match.git
+
+cd RADIX-Talent-Match
 ```
 
-3. Install dependencies:
+Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Create a `.env` file in the project root and add your Gemini/Groq API key:
+---
 
-```env
-GROQ_API_KEY=your_api_key_here
+# 🔑 Environment Variables
+
+Create a `.env` file.
+
+```
+GROQ_API_KEY=your_groq_api_key
 ```
 
-## Run the App
+---
 
-Start the Streamlit app with:
+# ▶ Running the Application
 
 ```bash
 streamlit run app.py
 ```
 
-Then open the provided local URL in your browser.
+---
 
-## Application Modules
+# 📷 Workflow
 
-- **Home**: overview, workflow, and platform metrics.
-- **JD Analytics**: upload a job description file and analyze it with Gemini AI.
-- **Resume Parser**: upload a resume file and extract structured candidate information.
-- **Profile Builder**: generate an editable AI profile from a resume upload.
-- **Talent Check**: analyze candidate readiness for selected companies.
-- **Skill Matching**: compare a resume to a job description and measure skill fit.
+```
+Upload Resume
+      │
+      ▼
+Resume Parsing
+      │
+      ▼
+Profile Builder
+      │
+      ▼
+Talent Check
+      │
+      ▼
+JD Analytics
+      │
+      ▼
+Skill Matching
+      │
+      ▼
+Final Hiring Report
+```
 
-## Project Structure
+---
 
-- `app.py` — main Streamlit app and navigation.
-- `ai/` — AI integration, prompts, and extraction logic for Gemini.
-- `parser/` — file parsing for PDF and DOCX content extraction.
-- `services/` — business logic for JD analytics, resume analysis, talent comparison, and skill matching.
-- `ui/` — Streamlit dashboard components and page layouts.
-- `utils/` — helper functions for file handling and utilities.
-- `exporter/` — JSON export utilities for analysis results.
-- `data/` — company and configuration data.
-- `assets/` — CSS styling for the app.
-- `output/` — generated analysis output files.
+# 🌟 Future Enhancements
 
-## Notes
+- Recruiter Dashboard
+- Candidate Login
+- Multi-Resume Ranking
+- Interview Question Generator
+- Resume Improvement Suggestions
+- PDF Report Generation
+- Email Integration
+- Database Integration (PostgreSQL/MySQL)
+- Authentication & Authorization
+- Analytics Dashboard
+- Multi-language Support
 
-- The app relies on the `GROQ_API_KEY` environment variable to connect to the Gemini AI endpoint.
-- Supported upload formats: `PDF`, `DOCX`.
-- JD analytics results are also saved to `output/jd_analysis.json`.
+---
 
-## License
+# 👥 Team
 
-This repository does not include a license file. Add one if you want to share or publish the project.
+**Team Name:** RADIX
+
+Members:
+
+- BOYA SAI KIRAN
+- *(Add remaining team members here)*
+
+---
+
+# 📄 License
+
+This project was developed for educational purposes and hackathons.
+
+---
+
+# 🙌 Acknowledgements
+
+- Groq
+- Streamlit
+- Meta Llama
+- Python Community
+- Open Source Contributors
