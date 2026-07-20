@@ -1,0 +1,51 @@
+{
+    "name": "BOYA SAIKIRAN",
+    "email": "Boyasaikiran37@gmail.com",
+    "phone": "+91 6303093649",
+    "location": "Coimbatore, TN",
+    "linkedin": "LinkedIn Profile",
+    "github": "GitHub Portfolio",
+    "professional_summary": "Final-year B.Tech student in Computer Science (AI & ML) at Karunya University (CGPA 7.0/10). Strong foundation in data analysis, automation scripting, and AI-powered tooling, with hands-on experience writing technical documentation and presenting findings to non-technical audiences.",
+    "technical_skills": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "C",
+        "React.js",
+        "HTML5",
+        "CSS3",
+        "Node.js",
+        "Express.js",
+        "MySQL",
+        "MongoDB",
+        "PyTorch",
+        "TensorFlow",
+        "scikit-learn",
+        "OpenCV",
+        "XGBoost",
+        "Git",
+        "GitHub",
+        "Streamlit",
+        "VS Code",
+        "Jupyter Notebook",
+        "Linux CLI"
+    ],
+    "programming_languages": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "C"
+    ],
+    "frameworks": [
+        "React.js",
+        "Node.js",
+        "Express.js"
+    ],
+    "databases": [
+        "MySQL",
+        "MongoDB"
+    ],
+    "preferred_role": "AI Engineer",
+    "work_mode": "Remote",
+    "expected_salary": 10
+}
