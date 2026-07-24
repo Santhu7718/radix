@@ -7,7 +7,7 @@ from app.ai.resume_extractor import extract_resume_information
 def analyze_resume(file_path):
     """
     Extract text from the uploaded resume
-    and analyze it using Gemini.
+    and analyze it using Groq.
     """
 
     if file_path.lower().endswith(".pdf"):

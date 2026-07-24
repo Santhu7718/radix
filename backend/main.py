@@ -87,7 +87,7 @@ with st.sidebar:
 
     st.markdown("---")
 
-    st.success("🟢 Gemini AI Connected")
+    st.success("🟢 Groq AI Connected")
 
     st.info(
         """
@@ -97,7 +97,7 @@ Version **1.0**
 
 Powered by
 
-✅ Gemini AI
+✅ Groq AI
 
 ✅ Streamlit
 
@@ -140,7 +140,7 @@ elif module == "📄 JD Analytics":
             use_container_width=True,
         ):
 
-            with st.spinner("🤖 Gemini AI is analyzing the Job Description..."):
+            with st.spinner("🤖 Groq AI is analyzing the Job Description..."):
 
                 try:
 
@@ -177,7 +177,7 @@ elif module == "📑 Resume Parser":
             use_container_width=True,
         ):
 
-            with st.spinner("🤖 Gemini AI is analyzing Resume..."):
+            with st.spinner("🤖 Groq AI is analyzing Resume..."):
 
                 try:
 
@@ -265,7 +265,7 @@ st.markdown(
 
 AI Powered Recruitment Intelligence Platform<br><br>
 
-Built with ❤️ using Python • Streamlit • Gemini AI
+Built with ❤️ using Python • Streamlit • Groq AI
 
 </div>
 """,

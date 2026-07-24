@@ -25,6 +25,12 @@ from ui.resume_dashboard import show_resume_dashboard
 from ui.profile_dashboard import show_profile_dashboard
 from ui.talent_dashboard import show_talent_dashboard
 from ui.skill_matching_dashboard import show_skill_matching_dashboard
+from ui.pipeline_dashboard import show_pipeline_dashboard, show_pipeline_upload
+
+# =====================================================
+# Pipeline
+# =====================================================
+from services.pipeline_service import run_pipeline
 
 
 # =====================================================
@@ -74,20 +80,22 @@ with st.sidebar:
     st.markdown("---")
 
     module = st.radio(
-        "",
+        "Navigation",
         [
             "🏠 Home",
+            "🔀 Pipeline",
             "📄 JD Analytics",
             "📑 Resume Parser",
             "👤 Profile Builder",
             "🏢 Talent Check",
             "🤝 Skill Matching",
         ],
+        label_visibility="collapsed",
     )
 
     st.markdown("---")
 
-    st.success("🟢 Gemini AI Connected")
+    st.success("🟢 Groq AI Connected")
 
     st.info(
         """
@@ -97,7 +105,7 @@ Version **1.0**
 
 Powered by
 
-✅ Gemini AI
+✅ Groq AI
 
 ✅ Streamlit
 
@@ -111,9 +119,57 @@ Powered by
 # =====================================================
 if module == "🏠 Home":
 
-    
-
     show_home()
+
+
+# =====================================================
+# PIPELINE
+# =====================================================
+elif module == "🔀 Pipeline":
+
+    # Render enterprise upload screen and get file handles
+    uploaded_jd, uploaded_resume = show_pipeline_upload()
+
+    st.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
+
+    # Run button — only enabled when both files are present
+    if uploaded_jd and uploaded_resume:
+
+        run_col, _ = st.columns([1, 2])
+
+        with run_col:
+            run_clicked = st.button(
+                "Run Pipeline",
+                use_container_width=True,
+                type="primary",
+                key="pipeline_run_btn",
+            )
+
+        if run_clicked:
+            jd_path     = save_uploaded_file(uploaded_jd)
+            resume_path = save_uploaded_file(uploaded_resume)
+
+            with st.spinner("Processing — extracting JD · parsing resume · running skill analysis…"):
+                try:
+                    result = run_pipeline(jd_path, resume_path)
+                    st.session_state["pipeline_result"] = result
+                    # clear on new submission
+                    st.session_state["pipeline_files"] = (
+                        uploaded_jd.name, uploaded_resume.name
+                    )
+                except Exception as e:
+                    st.error(f"Pipeline failed: {e}")
+                    st.session_state.pop("pipeline_result", None)
+
+    elif uploaded_jd or uploaded_resume:
+        st.info("Upload both a Job Description and a Resume to enable the pipeline.")
+
+    # Show results if they exist in session state
+    if st.session_state.get("pipeline_result"):
+        st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
+        show_pipeline_dashboard(st.session_state["pipeline_result"])
+
+
 
 
 # =====================================================
@@ -140,7 +196,7 @@ elif module == "📄 JD Analytics":
             use_container_width=True,
         ):
 
-            with st.spinner("🤖 Gemini AI is analyzing the Job Description..."):
+            with st.spinner("🤖 Groq AI is analyzing the Job Description..."):
 
                 try:
 
@@ -177,7 +233,7 @@ elif module == "📑 Resume Parser":
             use_container_width=True,
         ):
 
-            with st.spinner("🤖 Gemini AI is analyzing Resume..."):
+            with st.spinner("🤖 Groq AI is analyzing Resume..."):
 
                 try:
 
@@ -265,7 +321,7 @@ st.markdown(
 
 AI Powered Recruitment Intelligence Platform<br><br>
 
-Built with ❤️ using Python • Streamlit • Gemini AI
+Built with ❤️ using Python • Streamlit • Groq AI
 
 </div>
 """,
