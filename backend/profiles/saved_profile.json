@@ -1,0 +1,56 @@
+{
+    "name": "D Santhosh Kumar",
+    "email": "santhu7718@gmail.com",
+    "phone": "7013758452",
+    "location": "",
+    "linkedin": "https://www.linkedin.com/in/dabbara-santhosh-kumar-2580612a2",
+    "github": "https://github.com/Santhu7718",
+    "professional_summary": "AI/ML Engineering student with expertise in Full-Stack Development and Artificial Intelligence, focused on designing and developing scalable, production-grade systems using Python, MERN stack, and deep learning frameworks, with experience in Java.",
+    "technical_skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React.js",
+        "Express.js",
+        "Node.js",
+        "Django",
+        "Streamlit",
+        "PyTorch",
+        "TensorFlow",
+        "TorchVision",
+        "OpenAI CLIP",
+        "Transformers",
+        "Unsloth",
+        "ChromaDB",
+        "MongoDB",
+        "SQL",
+        "SQLite",
+        "Docker",
+        "GitHub",
+        "Snowflake",
+        "Microsoft Office"
+    ],
+    "programming_languages": [
+        "Python",
+        "Java",
+        "JavaScript"
+    ],
+    "frameworks": [
+        "React.js",
+        "Express.js",
+        "Node.js",
+        "Django",
+        "Streamlit"
+    ],
+    "databases": [
+        "MongoDB",
+        "SQL",
+        "ChromaDB",
+        "SQLite"
+    ],
+    "preferred_role": "Data Scientist",
+    "work_mode": "Hybrid",
+    "expected_salary": 12
+}

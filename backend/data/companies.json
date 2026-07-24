@@ -1,0 +1,169 @@
+{
+  "Google": {
+    "industry": "Technology",
+    "roles": [
+      "Software Engineer",
+      "AI Engineer",
+      "ML Engineer",
+      "Data Scientist"
+    ],
+    "required_skills": [
+      "Python",
+      "Java",
+      "C++",
+      "JavaScript",
+      "Data Structures & Algorithms",
+      "Object Oriented Programming",
+      "Machine Learning",
+      "Deep Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "SQL",
+      "Git",
+      "Linux",
+      "REST API Design",
+      "Docker",
+      "Kubernetes",
+      "System Design",
+      "Cloud Computing",
+      "Google Cloud",
+      "Computer Vision",
+      "Natural Language Processing",
+      "Problem Solving",
+      "Communication",
+      "Teamwork"
+    ]
+  },
+
+  "Microsoft": {
+    "industry": "Technology",
+    "roles": [
+      "Software Engineer",
+      "Cloud Engineer",
+      "Full Stack Developer",
+      "AI Engineer"
+    ],
+    "required_skills": [
+      "Python",
+      "C#",
+      ".NET",
+      "JavaScript",
+      "React.js",
+      "HTML5",
+      "CSS3",
+      "Azure",
+      "SQL",
+      "Git",
+      "REST API Design",
+      "Docker",
+      "Linux",
+      "Node.js",
+      "Express.js",
+      "Data Structures & Algorithms",
+      "Machine Learning",
+      "Azure AI",
+      "Problem Solving",
+      "Communication",
+      "Agile",
+      "Teamwork"
+    ]
+  },
+
+  "Amazon": {
+    "industry": "E-Commerce",
+    "roles": [
+      "Software Development Engineer",
+      "Backend Engineer",
+      "Cloud Engineer"
+    ],
+    "required_skills": [
+      "Java",
+      "Python",
+      "AWS",
+      "REST API Design",
+      "Microservices",
+      "Docker",
+      "Kubernetes",
+      "Git",
+      "Linux",
+      "MySQL",
+      "MongoDB",
+      "Data Structures & Algorithms",
+      "Object Oriented Programming",
+      "Distributed Systems",
+      "Networking",
+      "System Design",
+      "Problem Solving",
+      "Leadership",
+      "Communication",
+      "Teamwork"
+    ]
+  },
+
+  "Infosys": {
+    "industry": "IT Services",
+    "roles": [
+      "Digital Specialist Engineer",
+      "Specialist Programmer",
+      "Python Developer",
+      "AI Engineer"
+    ],
+    "required_skills": [
+      "Python",
+      "Java",
+      "C",
+      "SQL",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React.js",
+      "Node.js",
+      "Git",
+      "REST API Design",
+      "Data Structures & Algorithms",
+      "DBMS",
+      "Operating Systems",
+      "Computer Networks",
+      "OOP",
+      "Machine Learning",
+      "Problem Solving",
+      "Communication",
+      "Analytical Thinking",
+      "Teamwork"
+    ]
+  },
+
+  "IBM": {
+    "industry": "Technology",
+    "roles": [
+      "Data Scientist",
+      "AI Engineer",
+      "Software Developer"
+    ],
+    "required_skills": [
+      "Python",
+      "Java",
+      "SQL",
+      "Machine Learning",
+      "Deep Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Data Analysis",
+      "Data Visualization",
+      "Scikit-learn",
+      "Linux",
+      "Git",
+      "Docker",
+      "Cloud Computing",
+      "IBM Cloud",
+      "REST API Design",
+      "Natural Language Processing",
+      "Computer Vision",
+      "Problem Solving",
+      "Communication",
+      "Presentation Skills",
+      "Research"
+    ]
+  }
+}
