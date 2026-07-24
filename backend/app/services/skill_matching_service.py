@@ -1,5 +1,5 @@
-from services.profile_service import load_profile
-from services.jd_service import analyze_jd
+from app.services.profile_service import load_profile
+from app.services.jd_service import analyze_jd
 
 
 def normalize(skills):

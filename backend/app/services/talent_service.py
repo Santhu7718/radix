@@ -1,5 +1,5 @@
 import json
-from services.profile_service import load_profile
+from app.services.profile_service import load_profile
 
 
 def load_companies():

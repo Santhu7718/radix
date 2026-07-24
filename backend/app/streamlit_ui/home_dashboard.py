@@ -1,8 +1,8 @@
 import streamlit as st
 
-from ui.components import hero
-from ui.components import metric_card
-from ui.components import section
+from app.streamlit_ui.components import hero
+from app.streamlit_ui.components import metric_card
+from app.streamlit_ui.components import section
 
 
 def show_home():

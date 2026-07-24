@@ -1,4 +1,4 @@
-from services.talent_service import compare_candidate
+from app.services.talent_service import compare_candidate
 
 result = compare_candidate("Google")
 

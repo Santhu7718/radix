@@ -1,5 +1,5 @@
 import streamlit as st
-from services.talent_service import load_companies, compare_candidate
+from app.services.talent_service import load_companies, compare_candidate
 
 
 def show_talent_dashboard():

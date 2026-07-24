@@ -1,8 +1,8 @@
-from parser.parser import extract_text
+from app.parser.parser import extract_text
 
-from ai.jd_extractor import extract_job_information
+from app.ai.jd_extractor import extract_job_information
 
-from exporter.json_export import save_json
+from app.exporter.json_export import save_json
 
 
 def analyze_jd(file_path):

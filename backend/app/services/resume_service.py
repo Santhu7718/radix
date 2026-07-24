@@ -1,7 +1,7 @@
-from parser.pdf_parser import read_pdf
-from parser.docx_parser import read_docx
+from app.parser.pdf_parser import read_pdf
+from app.parser.docx_parser import read_docx
 
-from ai.resume_extractor import extract_resume_information
+from app.ai.resume_extractor import extract_resume_information
 
 
 def analyze_resume(file_path):

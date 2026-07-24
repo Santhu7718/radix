@@ -1,5 +1,5 @@
 import streamlit as st
-from services.profile_service import save_profile
+from app.services.profile_service import save_profile
 
 
 def show_profile_dashboard(resume):

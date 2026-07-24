@@ -1,16 +1,15 @@
 import json
 
-from ai.gemini import client, MODEL_NAME
-from ai.prompts import JD_ANALYSIS_PROMPT
+from app.ai.gemini import client, MODEL_NAME
+from app.ai.prompts import RESUME_ANALYSIS_PROMPT
 
 
-def extract_job_information(job_text):
+def extract_resume_information(resume_text):
     """
-    Extract structured job information from a Job Description
-    using Groq/OpenAI-compatible API.
+    Extract structured resume information using Groq/OpenAI-compatible API.
     """
 
-    prompt = f"{JD_ANALYSIS_PROMPT}\n\n{job_text}"
+    prompt = f"{RESUME_ANALYSIS_PROMPT}\n\n{resume_text}"
 
     try:
 
@@ -37,49 +36,30 @@ def extract_job_information(job_text):
         data = json.loads(result)
 
         # --------------------------------------------------
-        # Ensure required keys exist
+        # Default fields
         # --------------------------------------------------
 
         defaults = {
-            "company": "",
-            "role": "",
+            "name": "",
+            "email": "",
+            "phone": "",
             "location": "",
-            "experience": "",
-            "employment_type": "",
-            "education": "",
-            "certifications": [],
-            "salary": "",
+            "linkedin": "",
+            "github": "",
             "summary": "",
-            "required_skills": [],
-            "preferred_skills": [],
-            "programming_languages": [],
-            "frameworks": [],
-            "databases": [],
-            "cloud_platforms": [],
-            "ai_tools": [],
-            "devops_tools": [],
+            "skills": [],
+            "technical_skills": [],
             "soft_skills": [],
-            "responsibilities": [],
-            "skills": []
+            "projects": [],
+            "experience": [],
+            "education": [],
+            "certifications": [],
+            "languages": [],
+            "achievements": []
         }
 
         for key, value in defaults.items():
             data.setdefault(key, value)
-
-        # --------------------------------------------------
-        # ATS Defaults
-        # --------------------------------------------------
-
-        data.setdefault(
-            "ats",
-            {
-                "score": 75,
-                "difficulty": "Medium",
-                "reasons": [
-                    "ATS analysis generated automatically."
-                ]
-            }
-        )
 
         return data
 

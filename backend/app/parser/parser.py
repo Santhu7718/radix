@@ -1,5 +1,5 @@
-from parser.pdf_parser import read_pdf
-from parser.docx_parser import read_docx
+from app.parser.pdf_parser import read_pdf
+from app.parser.docx_parser import read_docx
 
 def extract_text(file_path):
 

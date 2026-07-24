@@ -1,4 +1,4 @@
-from ai.gemini import client, MODEL_NAME
+from app.ai.gemini import client, MODEL_NAME
 
 
 def generate_summary(job_text):

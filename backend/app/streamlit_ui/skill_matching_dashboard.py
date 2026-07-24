@@ -1,8 +1,8 @@
 import streamlit as st
 
-from services.skill_matching_service import compare_with_jd
+from app.services.skill_matching_service import compare_with_jd
 
-from utils.file_utils import save_uploaded_file
+from app.utils.file_utils import save_uploaded_file
 
 
 def show_skill_matching_dashboard():
