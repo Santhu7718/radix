@@ -53,7 +53,7 @@ and compare candidates with real jobs.
 
         metric_card(
             "AI Engine",
-            "Gemini",
+            "Groq",
             "🤖"
         )
 
@@ -61,7 +61,7 @@ and compare candidates with real jobs.
 
         metric_card(
             "Version",
-            "1.0",
+            "1",
             "🚀"
         )
 
